@@ -1,20 +1,51 @@
 package com.ai.slp.common.api.ipaddr.param;
 
+/**
+ * IpAddr
+ *
+ * Date: 2016年6月1日 <br>
+ * Copyright (c) 2016 asiainfo.com <br>
+ * @author gucl
+ */
 public class IpAddr {
+	/**
+	 * 序号
+	 */
     private String orderNo;
 
+    /**
+     * 省份编码
+     */
     private String provinceCode;
 
+    /**
+     * 省份名称
+     */
     private String provinceName;
 
+    /**
+     * 城市编码
+     */
     private String cityCode;
 
+    /**
+     * 城市名称
+     */
     private String cityName;
 
+    /**
+     * 基础运营商编码
+     */
     private String basicOrgId;
 
+    /**
+     * 基础运营商名称
+     */
     private String basicOrgName;
 
+    /**
+     * ip地址
+     */
     private String ipAddrCode;
 
     public String getOrderNo() {

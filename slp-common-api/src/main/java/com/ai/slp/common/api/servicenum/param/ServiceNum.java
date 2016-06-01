@@ -1,26 +1,65 @@
 package com.ai.slp.common.api.servicenum.param;
-
+/**
+ * ServiceNum
+ *
+ * Date: 2016年6月1日 <br>
+ * Copyright (c) 2016 asiainfo.com <br>
+ * @author gucl
+ */
 public class ServiceNum {
+	/**
+	 * 序号
+	 */
     private String orderNo;
 
+    /**
+     * 省份编码
+     */
     private String provinceCode;
 
+    /**
+     * 省份名称
+     */
     private String provinceName;
 
+    /**
+     * 城市编码
+     */
     private String cityCode;
 
+    /**
+     * 城市名称
+     */
     private String cityName;
 
+    /**
+     * 基础运营商编码
+     */
     private String basicOrgCode;
 
+    /**
+     * 基础运营商名称
+     */
     private String basicOrgName;
 
+    /**
+     * 号码头
+     */
     private String serviceHeadCode;
 
+    /**
+     * 号码段
+     */
     private String serviceNumCode;
 
+    /**
+     * 业务类型
+     */
     private String busiCode;
 
+    /**
+     * 备注
+     */
     private String remark;
 
     public String getOrderNo() {
