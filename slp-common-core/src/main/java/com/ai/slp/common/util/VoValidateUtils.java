@@ -184,4 +184,19 @@ public final class VoValidateUtils {
 	}
 
 
+	public static void validateGetServiceNumByIpPhone(String phone) {
+		if (StringUtils.isEmpty(phone)) {
+			throw new BusinessException(ExceptCodeConstants.Special.PARAM_IS_NULL, "手机号码不能为空");
+		}
+	}
+
+
+	public static void validateGetIpAddrByIp(String ip) {
+		if (StringUtils.isEmpty(ip)) {
+			throw new BusinessException(ExceptCodeConstants.Special.PARAM_IS_NULL, "IP不能为空");
+		}
+		
+	}
+
+
 }
