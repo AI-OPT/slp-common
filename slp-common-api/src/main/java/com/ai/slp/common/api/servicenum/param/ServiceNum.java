@@ -1,4 +1,7 @@
 package com.ai.slp.common.api.servicenum.param;
+
+import java.io.Serializable;
+
 /**
  * ServiceNum
  *
@@ -6,7 +9,10 @@ package com.ai.slp.common.api.servicenum.param;
  * Copyright (c) 2016 asiainfo.com <br>
  * @author gucl
  */
-public class ServiceNum {
+public class ServiceNum implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+
 	/**
 	 * 序号
 	 */
