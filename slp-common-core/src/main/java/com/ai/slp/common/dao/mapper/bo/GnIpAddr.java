@@ -3,6 +3,14 @@ package com.ai.slp.common.dao.mapper.bo;
 public class GnIpAddr {
     private String orderNo;
 
+    private String startIp;
+
+    private String endIp;
+
+    private Long startNum;
+
+    private Long endNum;
+
     private String provinceCode;
 
     private String provinceName;
@@ -11,11 +19,17 @@ public class GnIpAddr {
 
     private String cityName;
 
+    private String districtCode;
+
+    private String district;
+
     private String basicOrgId;
 
     private String basicOrgName;
 
-    private String ipAddrCode;
+    private String longitude;
+
+    private String latitude;
 
     public String getOrderNo() {
         return orderNo;
@@ -23,6 +37,38 @@ public class GnIpAddr {
 
     public void setOrderNo(String orderNo) {
         this.orderNo = orderNo == null ? null : orderNo.trim();
+    }
+
+    public String getStartIp() {
+        return startIp;
+    }
+
+    public void setStartIp(String startIp) {
+        this.startIp = startIp == null ? null : startIp.trim();
+    }
+
+    public String getEndIp() {
+        return endIp;
+    }
+
+    public void setEndIp(String endIp) {
+        this.endIp = endIp == null ? null : endIp.trim();
+    }
+
+    public Long getStartNum() {
+        return startNum;
+    }
+
+    public void setStartNum(Long startNum) {
+        this.startNum = startNum;
+    }
+
+    public Long getEndNum() {
+        return endNum;
+    }
+
+    public void setEndNum(Long endNum) {
+        this.endNum = endNum;
     }
 
     public String getProvinceCode() {
@@ -57,6 +103,22 @@ public class GnIpAddr {
         this.cityName = cityName == null ? null : cityName.trim();
     }
 
+    public String getDistrictCode() {
+        return districtCode;
+    }
+
+    public void setDistrictCode(String districtCode) {
+        this.districtCode = districtCode == null ? null : districtCode.trim();
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district == null ? null : district.trim();
+    }
+
     public String getBasicOrgId() {
         return basicOrgId;
     }
@@ -73,11 +135,19 @@ public class GnIpAddr {
         this.basicOrgName = basicOrgName == null ? null : basicOrgName.trim();
     }
 
-    public String getIpAddrCode() {
-        return ipAddrCode;
+    public String getLongitude() {
+        return longitude;
     }
 
-    public void setIpAddrCode(String ipAddrCode) {
-        this.ipAddrCode = ipAddrCode == null ? null : ipAddrCode.trim();
+    public void setLongitude(String longitude) {
+        this.longitude = longitude == null ? null : longitude.trim();
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude == null ? null : latitude.trim();
     }
 }

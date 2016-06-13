@@ -194,6 +194,266 @@ public class GnIpAddrCriteria {
             return (Criteria) this;
         }
 
+        public Criteria andStartIpIsNull() {
+            addCriterion("START_IP is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpIsNotNull() {
+            addCriterion("START_IP is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpEqualTo(String value) {
+            addCriterion("START_IP =", value, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpNotEqualTo(String value) {
+            addCriterion("START_IP <>", value, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpGreaterThan(String value) {
+            addCriterion("START_IP >", value, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpGreaterThanOrEqualTo(String value) {
+            addCriterion("START_IP >=", value, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpLessThan(String value) {
+            addCriterion("START_IP <", value, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpLessThanOrEqualTo(String value) {
+            addCriterion("START_IP <=", value, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpLike(String value) {
+            addCriterion("START_IP like", value, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpNotLike(String value) {
+            addCriterion("START_IP not like", value, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpIn(List<String> values) {
+            addCriterion("START_IP in", values, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpNotIn(List<String> values) {
+            addCriterion("START_IP not in", values, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpBetween(String value1, String value2) {
+            addCriterion("START_IP between", value1, value2, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartIpNotBetween(String value1, String value2) {
+            addCriterion("START_IP not between", value1, value2, "startIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpIsNull() {
+            addCriterion("END_IP is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpIsNotNull() {
+            addCriterion("END_IP is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpEqualTo(String value) {
+            addCriterion("END_IP =", value, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpNotEqualTo(String value) {
+            addCriterion("END_IP <>", value, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpGreaterThan(String value) {
+            addCriterion("END_IP >", value, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpGreaterThanOrEqualTo(String value) {
+            addCriterion("END_IP >=", value, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpLessThan(String value) {
+            addCriterion("END_IP <", value, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpLessThanOrEqualTo(String value) {
+            addCriterion("END_IP <=", value, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpLike(String value) {
+            addCriterion("END_IP like", value, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpNotLike(String value) {
+            addCriterion("END_IP not like", value, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpIn(List<String> values) {
+            addCriterion("END_IP in", values, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpNotIn(List<String> values) {
+            addCriterion("END_IP not in", values, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpBetween(String value1, String value2) {
+            addCriterion("END_IP between", value1, value2, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndIpNotBetween(String value1, String value2) {
+            addCriterion("END_IP not between", value1, value2, "endIp");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumIsNull() {
+            addCriterion("START_NUM is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumIsNotNull() {
+            addCriterion("START_NUM is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumEqualTo(Long value) {
+            addCriterion("START_NUM =", value, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumNotEqualTo(Long value) {
+            addCriterion("START_NUM <>", value, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumGreaterThan(Long value) {
+            addCriterion("START_NUM >", value, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumGreaterThanOrEqualTo(Long value) {
+            addCriterion("START_NUM >=", value, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumLessThan(Long value) {
+            addCriterion("START_NUM <", value, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumLessThanOrEqualTo(Long value) {
+            addCriterion("START_NUM <=", value, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumIn(List<Long> values) {
+            addCriterion("START_NUM in", values, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumNotIn(List<Long> values) {
+            addCriterion("START_NUM not in", values, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumBetween(Long value1, Long value2) {
+            addCriterion("START_NUM between", value1, value2, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andStartNumNotBetween(Long value1, Long value2) {
+            addCriterion("START_NUM not between", value1, value2, "startNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumIsNull() {
+            addCriterion("END_NUM is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumIsNotNull() {
+            addCriterion("END_NUM is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumEqualTo(Long value) {
+            addCriterion("END_NUM =", value, "endNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumNotEqualTo(Long value) {
+            addCriterion("END_NUM <>", value, "endNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumGreaterThan(Long value) {
+            addCriterion("END_NUM >", value, "endNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumGreaterThanOrEqualTo(Long value) {
+            addCriterion("END_NUM >=", value, "endNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumLessThan(Long value) {
+            addCriterion("END_NUM <", value, "endNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumLessThanOrEqualTo(Long value) {
+            addCriterion("END_NUM <=", value, "endNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumIn(List<Long> values) {
+            addCriterion("END_NUM in", values, "endNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumNotIn(List<Long> values) {
+            addCriterion("END_NUM not in", values, "endNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumBetween(Long value1, Long value2) {
+            addCriterion("END_NUM between", value1, value2, "endNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andEndNumNotBetween(Long value1, Long value2) {
+            addCriterion("END_NUM not between", value1, value2, "endNum");
+            return (Criteria) this;
+        }
+
         public Criteria andProvinceCodeIsNull() {
             addCriterion("PROVINCE_CODE is null");
             return (Criteria) this;
@@ -474,6 +734,146 @@ public class GnIpAddrCriteria {
             return (Criteria) this;
         }
 
+        public Criteria andDistrictCodeIsNull() {
+            addCriterion("DISTRICT_CODE is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeIsNotNull() {
+            addCriterion("DISTRICT_CODE is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeEqualTo(String value) {
+            addCriterion("DISTRICT_CODE =", value, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeNotEqualTo(String value) {
+            addCriterion("DISTRICT_CODE <>", value, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeGreaterThan(String value) {
+            addCriterion("DISTRICT_CODE >", value, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeGreaterThanOrEqualTo(String value) {
+            addCriterion("DISTRICT_CODE >=", value, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeLessThan(String value) {
+            addCriterion("DISTRICT_CODE <", value, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeLessThanOrEqualTo(String value) {
+            addCriterion("DISTRICT_CODE <=", value, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeLike(String value) {
+            addCriterion("DISTRICT_CODE like", value, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeNotLike(String value) {
+            addCriterion("DISTRICT_CODE not like", value, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeIn(List<String> values) {
+            addCriterion("DISTRICT_CODE in", values, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeNotIn(List<String> values) {
+            addCriterion("DISTRICT_CODE not in", values, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeBetween(String value1, String value2) {
+            addCriterion("DISTRICT_CODE between", value1, value2, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictCodeNotBetween(String value1, String value2) {
+            addCriterion("DISTRICT_CODE not between", value1, value2, "districtCode");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictIsNull() {
+            addCriterion("DISTRICT is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictIsNotNull() {
+            addCriterion("DISTRICT is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictEqualTo(String value) {
+            addCriterion("DISTRICT =", value, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictNotEqualTo(String value) {
+            addCriterion("DISTRICT <>", value, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictGreaterThan(String value) {
+            addCriterion("DISTRICT >", value, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictGreaterThanOrEqualTo(String value) {
+            addCriterion("DISTRICT >=", value, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictLessThan(String value) {
+            addCriterion("DISTRICT <", value, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictLessThanOrEqualTo(String value) {
+            addCriterion("DISTRICT <=", value, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictLike(String value) {
+            addCriterion("DISTRICT like", value, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictNotLike(String value) {
+            addCriterion("DISTRICT not like", value, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictIn(List<String> values) {
+            addCriterion("DISTRICT in", values, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictNotIn(List<String> values) {
+            addCriterion("DISTRICT not in", values, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictBetween(String value1, String value2) {
+            addCriterion("DISTRICT between", value1, value2, "district");
+            return (Criteria) this;
+        }
+
+        public Criteria andDistrictNotBetween(String value1, String value2) {
+            addCriterion("DISTRICT not between", value1, value2, "district");
+            return (Criteria) this;
+        }
+
         public Criteria andBasicOrgIdIsNull() {
             addCriterion("BASIC_ORG_ID is null");
             return (Criteria) this;
@@ -614,73 +1014,143 @@ public class GnIpAddrCriteria {
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeIsNull() {
-            addCriterion("IP_ADDR_CODE is null");
+        public Criteria andLongitudeIsNull() {
+            addCriterion("LONGITUDE is null");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeIsNotNull() {
-            addCriterion("IP_ADDR_CODE is not null");
+        public Criteria andLongitudeIsNotNull() {
+            addCriterion("LONGITUDE is not null");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeEqualTo(String value) {
-            addCriterion("IP_ADDR_CODE =", value, "ipAddrCode");
+        public Criteria andLongitudeEqualTo(String value) {
+            addCriterion("LONGITUDE =", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeNotEqualTo(String value) {
-            addCriterion("IP_ADDR_CODE <>", value, "ipAddrCode");
+        public Criteria andLongitudeNotEqualTo(String value) {
+            addCriterion("LONGITUDE <>", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeGreaterThan(String value) {
-            addCriterion("IP_ADDR_CODE >", value, "ipAddrCode");
+        public Criteria andLongitudeGreaterThan(String value) {
+            addCriterion("LONGITUDE >", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeGreaterThanOrEqualTo(String value) {
-            addCriterion("IP_ADDR_CODE >=", value, "ipAddrCode");
+        public Criteria andLongitudeGreaterThanOrEqualTo(String value) {
+            addCriterion("LONGITUDE >=", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeLessThan(String value) {
-            addCriterion("IP_ADDR_CODE <", value, "ipAddrCode");
+        public Criteria andLongitudeLessThan(String value) {
+            addCriterion("LONGITUDE <", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeLessThanOrEqualTo(String value) {
-            addCriterion("IP_ADDR_CODE <=", value, "ipAddrCode");
+        public Criteria andLongitudeLessThanOrEqualTo(String value) {
+            addCriterion("LONGITUDE <=", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeLike(String value) {
-            addCriterion("IP_ADDR_CODE like", value, "ipAddrCode");
+        public Criteria andLongitudeLike(String value) {
+            addCriterion("LONGITUDE like", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeNotLike(String value) {
-            addCriterion("IP_ADDR_CODE not like", value, "ipAddrCode");
+        public Criteria andLongitudeNotLike(String value) {
+            addCriterion("LONGITUDE not like", value, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeIn(List<String> values) {
-            addCriterion("IP_ADDR_CODE in", values, "ipAddrCode");
+        public Criteria andLongitudeIn(List<String> values) {
+            addCriterion("LONGITUDE in", values, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeNotIn(List<String> values) {
-            addCriterion("IP_ADDR_CODE not in", values, "ipAddrCode");
+        public Criteria andLongitudeNotIn(List<String> values) {
+            addCriterion("LONGITUDE not in", values, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeBetween(String value1, String value2) {
-            addCriterion("IP_ADDR_CODE between", value1, value2, "ipAddrCode");
+        public Criteria andLongitudeBetween(String value1, String value2) {
+            addCriterion("LONGITUDE between", value1, value2, "longitude");
             return (Criteria) this;
         }
 
-        public Criteria andIpAddrCodeNotBetween(String value1, String value2) {
-            addCriterion("IP_ADDR_CODE not between", value1, value2, "ipAddrCode");
+        public Criteria andLongitudeNotBetween(String value1, String value2) {
+            addCriterion("LONGITUDE not between", value1, value2, "longitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeIsNull() {
+            addCriterion("LATITUDE is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeIsNotNull() {
+            addCriterion("LATITUDE is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeEqualTo(String value) {
+            addCriterion("LATITUDE =", value, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeNotEqualTo(String value) {
+            addCriterion("LATITUDE <>", value, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeGreaterThan(String value) {
+            addCriterion("LATITUDE >", value, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeGreaterThanOrEqualTo(String value) {
+            addCriterion("LATITUDE >=", value, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeLessThan(String value) {
+            addCriterion("LATITUDE <", value, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeLessThanOrEqualTo(String value) {
+            addCriterion("LATITUDE <=", value, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeLike(String value) {
+            addCriterion("LATITUDE like", value, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeNotLike(String value) {
+            addCriterion("LATITUDE not like", value, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeIn(List<String> values) {
+            addCriterion("LATITUDE in", values, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeNotIn(List<String> values) {
+            addCriterion("LATITUDE not in", values, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeBetween(String value1, String value2) {
+            addCriterion("LATITUDE between", value1, value2, "latitude");
+            return (Criteria) this;
+        }
+
+        public Criteria andLatitudeNotBetween(String value1, String value2) {
+            addCriterion("LATITUDE not between", value1, value2, "latitude");
             return (Criteria) this;
         }
     }
