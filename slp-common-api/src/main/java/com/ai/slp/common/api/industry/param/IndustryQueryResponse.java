@@ -8,32 +8,34 @@ public class IndustryQueryResponse extends BaseResponse{
     /**
      * 行业类型编码
      */
-    private String IndustryCode;
+    private String industryCode;
 
     /**
      * 行业类型名称
      */
-    private String IndustryName;
+    private String industryName;
 
     /**
      * 行业描述
      */
     private String IndustryDesc;
 
+   
+
     public String getIndustryCode() {
-        return IndustryCode;
+        return industryCode;
     }
 
     public void setIndustryCode(String industryCode) {
-        IndustryCode = industryCode;
+        this.industryCode = industryCode;
     }
 
     public String getIndustryName() {
-        return IndustryName;
+        return industryName;
     }
 
     public void setIndustryName(String industryName) {
-        IndustryName = industryName;
+        this.industryName = industryName;
     }
 
     public String getIndustryDesc() {
