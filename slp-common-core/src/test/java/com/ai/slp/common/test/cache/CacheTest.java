@@ -9,11 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.ai.paas.ipaas.mcs.interfaces.ICacheClient;
 import com.ai.slp.common.api.cache.impl.CacheSVImpl;
 import com.ai.slp.common.api.cache.interfaces.ICacheSV;
 import com.ai.slp.common.api.cache.param.Area;
 import com.ai.slp.common.api.cache.param.SysParam;
 import com.ai.slp.common.cache.GnSysParamCache;
+import com.ai.slp.common.constants.CacheNSMapper;
+import com.ai.slp.common.util.CacheFactoryUtil;
 import com.alibaba.fastjson.JSON;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -48,13 +51,25 @@ public class CacheTest {
     @Test
     public void testReadGnSysParam() throws Exception {
     	//测试证件号码转换
-        SysParam singleParam=iCacheSV.getSysParam("BIS-ST", "CHL_CHANNEL", "STATE", "1");
+        SysParam singleParam=iCacheSV.getSysParam("SLP", "ORD_OD_FEE_TOTAL", "PAY_STYLE", "1");
 		List<SysParam> paramList=iCacheSV.getSysParams("BIS-ST", "CHL_CHANNEL", "STATE");
         		
 		System.out.println("singleParam="+JSON.toJSONString(singleParam));
 		System.out.println("paramList="+JSON.toJSONString(paramList));
     }
-    
+    @Test
+    public void testGnSubject() throws Exception {
+        //测试证件号码转换
+        ICacheClient cacheClient = CacheFactoryUtil.getCacheClient(CacheNSMapper.CACHE_GN_SUBJECT);
+        String data = cacheClient.hget(CacheNSMapper.CACHE_GN_SUBJECT,
+                "2.SLP.100000");
+        System.out.println(data);
+//        SysParam singleParam=iCacheSV.getSysParam("SLP", "ORD_OD_FEE_TOTAL", "PAY_STYLE", "1");
+//        List<SysParam> paramList=iCacheSV.getSysParams("BIS-ST", "CHL_CHANNEL", "STATE");
+//                
+//        System.out.println("singleParam="+JSON.toJSONString(singleParam));
+//        System.out.println("paramList="+JSON.toJSONString(paramList));
+    }
     @Test
 	public void testCacheSysParam(){
 		
