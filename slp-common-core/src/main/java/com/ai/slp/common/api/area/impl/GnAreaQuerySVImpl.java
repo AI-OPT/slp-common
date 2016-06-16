@@ -170,7 +170,7 @@ public class GnAreaQuerySVImpl implements IGnAreaQuerySV {
 	}
 
     @Override
-    public List<GnAreaVo> getAreaCodeByName(GnAreaCondition condition)
+    public List<GnAreaVo> getAreaByName(GnAreaCondition condition)
             throws BusinessException, SystemException {
         List<GnArea> dbList = iGnAreaBusinessService.selectByName(condition);
         List<GnAreaVo> resultList=null;
