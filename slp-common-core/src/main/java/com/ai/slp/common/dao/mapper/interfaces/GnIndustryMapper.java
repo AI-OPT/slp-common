@@ -1,9 +1,11 @@
 package com.ai.slp.common.dao.mapper.interfaces;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.ai.slp.common.dao.mapper.bo.GnIndustry;
 import com.ai.slp.common.dao.mapper.bo.GnIndustryCriteria;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
 public interface GnIndustryMapper {
     int countByExample(GnIndustryCriteria example);
