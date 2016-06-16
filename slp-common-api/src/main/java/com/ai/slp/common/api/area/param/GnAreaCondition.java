@@ -21,7 +21,10 @@ public class GnAreaCondition extends BaseInfo {
      * 区域级别
      */
     private AreaLevel areaLevel;
-
+   /**
+    * 区域名称
+    */
+    private String areaName;
 
     public String getAreaCode() {
         return areaCode;
@@ -38,4 +41,13 @@ public class GnAreaCondition extends BaseInfo {
     public void setAreaLevel(AreaLevel areaLevel) {
         this.areaLevel = areaLevel;
     }
+
+    public String getAreaName() {
+        return areaName;
+    }
+
+    public void setAreaName(String areaName) {
+        this.areaName = areaName;
+    }
+    
 }

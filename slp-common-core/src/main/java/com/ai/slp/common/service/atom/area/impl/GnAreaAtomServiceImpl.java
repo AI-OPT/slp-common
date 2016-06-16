@@ -278,4 +278,16 @@ public class GnAreaAtomServiceImpl implements IGnAreaAtomService {
         sql.setLimitEnd(pageSize);
         return MapperFactory.getGnAreaMapper().selectByExample(sql);
     }
+
+    @Override
+    public List<GnArea> selectByName(GnAreaCondition condition) {
+        GnAreaCriteria sql = new GnAreaCriteria();
+        GnAreaCriteria.Criteria criteria = sql.or();
+        criteria.andStateEqualTo(Constants.AreaState.ACTIVITY);
+        criteria.andAreaLevelEqualTo(AreaLevel.PROVINCE_LEVEL.getLevelValue());
+        if (!StringUtil.isBlank(condition.getAreaName())) {
+            criteria.andAreaNameLike("%"+condition.getAreaName()+"%");
+        }
+        return MapperFactory.getGnAreaMapper().selectByExample(sql);
+    }
 }

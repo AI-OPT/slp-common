@@ -168,4 +168,20 @@ public class GnAreaQuerySVImpl implements IGnAreaQuerySV {
 		VoValidateUtils.validateGetFilterAreaListByPage(areaPage);
 		return iGnAreaBusinessService.getFilterAreaListByPage(areaPage);
 	}
+
+    @Override
+    public List<GnAreaVo> getAreaCodeByName(GnAreaCondition condition)
+            throws BusinessException, SystemException {
+        List<GnArea> dbList = iGnAreaBusinessService.selectByName(condition);
+        List<GnAreaVo> resultList=null;
+        if(!CollectionUtil.isEmpty(dbList)){
+            resultList=new ArrayList<GnAreaVo>();
+            for(GnArea area : dbList){
+                GnAreaVo areavo=new GnAreaVo();
+                BeanUtils.copyProperties(areavo, area);
+                resultList.add(areavo);
+            }
+        }
+        return resultList;
+    }
 }

@@ -30,4 +30,6 @@ public interface IGnAreaBusinessService {
     void deleteArea(GnAreaCondition gnAreaCondition);
     void deleteAreas(List<GnAreaCondition> gnAreaCondition);
     
+    List<GnArea> selectByName(GnAreaCondition condition);
+    
 }

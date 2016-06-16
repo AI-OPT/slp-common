@@ -144,6 +144,11 @@ public class GnAreaBusinessService implements IGnAreaBusinessService {
 		}
 		return pageResult;
 	}
+
+    @Override
+    public List<GnArea> selectByName(GnAreaCondition condition) {
+        return gnAreaAtomService.selectByName(condition);
+    }
     
     
 }

@@ -30,4 +30,7 @@ public interface IGnAreaAtomService {
     void deleteAreas(List<GnAreaCondition> gnAreaCondition);
     Integer getAreaCount();
     List<GnArea> getAreaList(int start,int pageNO);
+    
+    
+    List<GnArea> selectByName(GnAreaCondition condition);
 }

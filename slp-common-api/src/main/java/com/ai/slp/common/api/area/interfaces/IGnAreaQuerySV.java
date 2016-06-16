@@ -128,5 +128,14 @@ public interface IGnAreaQuerySV {
      * @ApiCode GN_0111
      */
     PageInfo<GnAreaVo> getFilterAreaListByPage(GnAreaPageFilterCondition areaPage) throws BusinessException,SystemException;
-    
+    /**
+     * 根据省份名称、级别查询数据
+     * @param condition
+     * @return
+     * @throws BusinessException
+     * @throws SystemException
+     * @author zhanglh
+     * @ApiCode
+     */
+    List<GnAreaVo> getAreaCodeByName(GnAreaCondition condition) throws BusinessException,SystemException;
 }
