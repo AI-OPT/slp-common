@@ -55,7 +55,11 @@ public class SysParam implements Serializable {
     private String subParamCode;
     
 
-    public String getTypeCode() {
+    public SysParam() {
+		super();
+	}
+
+	public String getTypeCode() {
         return typeCode;
     }
 

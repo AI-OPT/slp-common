@@ -61,7 +61,9 @@ public class Area extends BaseInfo implements Serializable{
      * 租户ID
      */
     private String tenantId;
-
+    public Area() {
+		super();
+	}
     public String getAreaCode() {
         return areaCode;
     }
@@ -74,7 +76,9 @@ public class Area extends BaseInfo implements Serializable{
         return areaName;
     }
 
-    public void setAreaName(String areaName) {
+   
+
+	public void setAreaName(String areaName) {
         this.areaName = areaName == null ? null : areaName.trim();
     }
 
