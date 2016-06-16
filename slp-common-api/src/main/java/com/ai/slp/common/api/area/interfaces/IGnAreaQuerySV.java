@@ -137,5 +137,5 @@ public interface IGnAreaQuerySV {
      * @author zhanglh
      * @ApiCode
      */
-    List<GnAreaVo> getAreaCodeByName(GnAreaCondition condition) throws BusinessException,SystemException;
+    List<GnAreaVo> getAreaByName(GnAreaCondition condition) throws BusinessException,SystemException;
 }
