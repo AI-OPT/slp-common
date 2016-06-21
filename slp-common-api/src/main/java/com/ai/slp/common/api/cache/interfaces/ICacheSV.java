@@ -39,7 +39,7 @@ public interface ICacheSV {
             throws BusinessException,SystemException;
     
     /**
-     * 
+     * 获取字典参数列表
      * @param param
      * @return
      * @throws BusinessException
@@ -75,7 +75,7 @@ public interface ICacheSV {
             String columnValue) throws BusinessException,SystemException;
     
     /**
-     * 
+     * 获取单条字典参数
      * @param param
      * @return
      * @throws BusinessException
