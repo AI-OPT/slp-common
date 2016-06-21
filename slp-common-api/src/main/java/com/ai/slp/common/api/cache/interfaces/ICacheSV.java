@@ -6,6 +6,8 @@ import com.ai.opt.base.exception.BusinessException;
 import com.ai.opt.base.exception.SystemException;
 import com.ai.slp.common.api.cache.param.Area;
 import com.ai.slp.common.api.cache.param.SysParam;
+import com.ai.slp.common.api.cache.param.SysParamMultiCond;
+import com.ai.slp.common.api.cache.param.SysParamSingleCond;
 
 /**
  * 公共中心缓存读取服务<br>
@@ -30,9 +32,24 @@ public interface ICacheSV {
      * @author gucl
      * @ApiDocMethod
      * @ApiCode GN_0200
+     * @deprecated 请使用GN_0205getSysParamList服务，后续该方法会删除
      */
+	@Deprecated 
     public List<SysParam> getSysParams(String tenantId, String typeCode, String paramCode)
             throws BusinessException,SystemException;
+    
+    /**
+     * 
+     * @param param
+     * @return
+     * @throws BusinessException
+     * @throws SystemException
+     * @author gucl
+     * @ApiDocMethod
+     * @ApiCode GN_0205
+     */
+    public List<SysParam> getSysParamList(SysParamMultiCond param)
+    		throws BusinessException,SystemException;
 
     /**
      * 
@@ -51,9 +68,23 @@ public interface ICacheSV {
      * @author gucl
      * @ApiDocMethod
      * @ApiCode GN_0201
+     * @deprecated 请使用GN_0206 getSysParamSingle服务，后续该方法会删除
      */
+    @Deprecated
     public SysParam getSysParam(String tenantId, String typeCode, String paramCode,
             String columnValue) throws BusinessException,SystemException;
+    
+    /**
+     * 
+     * @param param
+     * @return
+     * @throws BusinessException
+     * @throws SystemException
+     * @author gucl
+     * @ApiDocMethod
+     * @ApiCode GN_0206
+     */
+    public SysParam getSysParamSingle(SysParamSingleCond param) throws BusinessException,SystemException;
 
     
     /**
