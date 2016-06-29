@@ -29,26 +29,6 @@ public interface ICacheSV {
 
     /**
      * 获取字典参数列表
-     * 
-     * @param tenantId
-     *            租户ID
-     * @param typeCode
-     *            字典类型
-     * @param paramCode
-     *            字典参数
-     * @return 字段参数配置列表 List<SysParam>
-     * @throws BusinessException,SystemException
-     * @author gucl
-     * @ApiDocMethod
-     * @ApiCode GN_0200
-     * @deprecated 请使用GN_0205getSysParamList服务，后续该方法会删除
-     */
-	@Deprecated 
-    public List<SysParam> getSysParams(String tenantId, String typeCode, String paramCode)
-            throws BusinessException,SystemException;
-    
-    /**
-     * 获取字典参数列表
      * @param param
      * @return
      * @throws BusinessException
@@ -63,28 +43,6 @@ public interface ICacheSV {
     public List<SysParam> getSysParamList(SysParamMultiCond param)
     		throws BusinessException,SystemException;
 
-    /**
-     * 
-     * 获取单条字典参数
-     * 
-     * @param tenantId
-     *            租户ID
-     * @param typeCode
-     *            字典类型
-     * @param paramCode
-     *            字典参数
-     * @param columnValue
-     *          字典取值
-     * @return 单个字典参数配置对象 SysParam
-     * @throws BusinessException,SystemException
-     * @author gucl
-     * @ApiDocMethod
-     * @ApiCode GN_0201
-     * @deprecated 请使用GN_0206 getSysParamSingle服务，后续该方法会删除
-     */
-    @Deprecated
-    public SysParam getSysParam(String tenantId, String typeCode, String paramCode,
-            String columnValue) throws BusinessException,SystemException;
     
     /**
      * 获取单条字典参数

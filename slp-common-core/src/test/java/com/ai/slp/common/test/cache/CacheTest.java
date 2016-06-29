@@ -34,7 +34,7 @@ public class CacheTest {
         CacheServiceStart.main(new String[] {});
     }
 
-    @Test
+    /*@Test
     public void testWriteGnSysParam() throws Exception {
 
         ICacheSV cache = new CacheSVImpl();
@@ -42,7 +42,7 @@ public class CacheTest {
         SysParam cobj = cache.getSysParam("ALL", "SERVICE_FETCH", "BUSI_CODE", "fwbg-yysl");
         System.out.println("GnSysParam clist=" + JSON.toJSONString(clist));
         System.out.println("GnSysParam cobj=" + JSON.toJSONString(cobj.getDescb()));
-    }
+    }*/
 
 
     @Test
@@ -50,7 +50,7 @@ public class CacheTest {
         System.out.println(UUID.randomUUID().toString());
     }
     
-    @Test
+   /* @Test
     public void testReadGnSysParam() throws Exception {
     	//测试证件号码转换
         SysParam singleParam=iCacheSV.getSysParam("SLP", "ORD_OD_FEE_TOTAL", "PAY_STYLE", "1");
@@ -58,7 +58,7 @@ public class CacheTest {
         		
 		System.out.println("singleParam="+JSON.toJSONString(singleParam));
 		System.out.println("paramList="+JSON.toJSONString(paramList));
-    }
+    }*/
     @Test
     public void testReadGnSysParamNew() throws Exception {
     	SysParamSingleCond paramSingle=new SysParamSingleCond("SLP", "ORD_OD_FEE_TOTAL", "PAY_STYLE", "1");
@@ -83,7 +83,7 @@ public class CacheTest {
 //        System.out.println("singleParam="+JSON.toJSONString(singleParam));
 //        System.out.println("paramList="+JSON.toJSONString(paramList));
     }
-    @Test
+    /*@Test
 	public void testCacheSysParam(){
 		
 		ICacheSV sv=new CacheSVImpl();
@@ -92,15 +92,15 @@ public class CacheTest {
         		
 		System.out.println("singleParam="+JSON.toJSONString(singleParam));
 		System.out.println("paramList="+JSON.toJSONString(paramList));
-	}
+	}*/
     
-    @Test
+    /*@Test
     public void testReadGnSysParam2() throws Exception {
     	//测试证件号码转换
         ICacheSV sv = new CacheSVImpl();
         SysParam singleParam=sv.getSysParam("BIS-TEST", "ORD_ORDER", "STATE", "11");
 		System.out.println("singleParam="+JSON.toJSONString(singleParam));
-    }
+    }*/
     
     @Test
     public void testReadArea() throws Exception {
