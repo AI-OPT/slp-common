@@ -1,5 +1,11 @@
 package com.ai.slp.common.api.servicenum.interfaces;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
 import com.ai.slp.common.api.servicenum.param.ServiceNum;
 /**
  * 手机号码段服务
@@ -8,6 +14,9 @@ import com.ai.slp.common.api.servicenum.param.ServiceNum;
  * Copyright (c) 2016 asiainfo.com <br>
  * @author gucl
  */
+@Path("/servicenum")
+@Consumes({ MediaType.APPLICATION_JSON })
+@Produces({ MediaType.APPLICATION_JSON, MediaType.TEXT_XML })
 public interface IServiceNumSV {
 	/**
 	 * 根据手机号码查询归属地和运营商
@@ -16,6 +25,9 @@ public interface IServiceNumSV {
 	 * @author gucl
 	 * @ApiDocMethod
 	 * @ApiCode GN_0501
+	 * @RestRelativeURL servicenum/getServiceNumByPhone
 	 */
+	@POST
+	@Path("/getServiceNumByPhone")
 	ServiceNum getServiceNumByPhone(String phone);
 }

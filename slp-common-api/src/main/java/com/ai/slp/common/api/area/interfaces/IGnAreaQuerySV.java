@@ -2,6 +2,12 @@ package com.ai.slp.common.api.area.interfaces;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
 import com.ai.opt.base.exception.BusinessException;
 import com.ai.opt.base.exception.SystemException;
 import com.ai.opt.base.vo.PageInfo;
@@ -18,6 +24,9 @@ import com.ai.slp.common.api.area.param.GnAreaVo;
  *
  * @author gucl
  */
+@Path("/areaquery")
+@Consumes({ MediaType.APPLICATION_JSON })
+@Produces({ MediaType.APPLICATION_JSON, MediaType.TEXT_XML })
 public interface IGnAreaQuerySV {
 
     /**
@@ -30,7 +39,10 @@ public interface IGnAreaQuerySV {
      * @throws BusinessException,SystemException
      * @ApiDocMethod
      * @ApiCode GN_0101
-     */
+     * @RestRelativeURL areaquery/selectByID
+	 */
+	@POST
+	@Path("/selectByID")
     GnAreaVo selectByID(GnAreaCondition condition) throws BusinessException,SystemException;
     
     
@@ -42,7 +54,10 @@ public interface IGnAreaQuerySV {
      * @author gucl
      * @ApiDocMethod
      * @ApiCode GN_0102
-     */
+     * @RestRelativeURL areaquery/queryGnArea
+	 */
+	@POST
+	@Path("/queryGnArea")
     GnAreaVo queryGnArea(String areaCode) throws BusinessException,SystemException;
     
     
@@ -53,7 +68,10 @@ public interface IGnAreaQuerySV {
      * @throws BusinessException,SystemException
      * @ApiDocMethod
      * @ApiCode GN_0103
-     */
+     * @RestRelativeURL areaquery/getProvinceList
+	 */
+	@POST
+	@Path("/getProvinceList")
     List<GnAreaVo> getProvinceList() throws BusinessException,SystemException;
     
     /**
@@ -63,7 +81,10 @@ public interface IGnAreaQuerySV {
      * @author gucl
      * @ApiDocMethod
      * @ApiCode GN_0104
-     */
+     * @RestRelativeURL areaquery/getParentAreaListByAreaCode
+	 */
+	@POST
+	@Path("/getParentAreaListByAreaCode")
     List<GnAreaVo> getParentAreaListByAreaCode(GnAreaCodeCondition condition) throws BusinessException,SystemException;
     
     /**
@@ -74,7 +95,10 @@ public interface IGnAreaQuerySV {
      * @author gucl
      * @ApiDocMethod
      * @ApiCode GN_0105
-     */
+     * @RestRelativeURL areaquery/getCityListByProviceCode
+	 */
+	@POST
+	@Path("/getCityListByProviceCode")
     List<GnAreaVo> getCityListByProviceCode(String provinceCode) throws BusinessException,SystemException;
     /**
      * 根据城市code，查找所有的区县列表
@@ -84,7 +108,10 @@ public interface IGnAreaQuerySV {
      * @author gucl
      * @ApiDocMethod
      * @ApiCode GN_0106
-     */
+     * @RestRelativeURL areaquery/getCountyListByCityCode
+	 */
+	@POST
+	@Path("/getCountyListByCityCode")
     List<GnAreaVo> getCountyListByCityCode(String cityCode) throws BusinessException,SystemException;
     /**
      * 根据区县code，查找所有的街道列表
@@ -94,7 +121,10 @@ public interface IGnAreaQuerySV {
      * @author gucl
      * @ApiDocMethod
      * @ApiCode GN_0107
-     */
+     * @RestRelativeURL areaquery/getStreetListByCountyCode
+	 */
+	@POST
+	@Path("/getStreetListByCountyCode")
     List<GnAreaVo> getStreetListByCountyCode(String countyCode) throws BusinessException,SystemException;
     
     /**
@@ -105,7 +135,10 @@ public interface IGnAreaQuerySV {
      * @author gucl
      * @ApiDocMethod
      * @ApiCode GN_0109
-     */
+     * @RestRelativeURL areaquery/getAreaListByPage
+	 */
+	@POST
+	@Path("/getAreaListByPage")
     PageInfo<GnAreaVo> getAreaListByPage(GnAreaPageCondition areaPage) throws BusinessException,SystemException;
     
     /**
@@ -115,7 +148,10 @@ public interface IGnAreaQuerySV {
      * @author gaogang
      * @ApiDocMethod
      * @ApiCode GN_0110
-     */
+     * @RestRelativeURL areaquery/getNationList
+	 */
+	@POST
+	@Path("/getNationList")
     List<GnAreaVo> getNationList() throws BusinessException,SystemException;
     
     /**
@@ -126,7 +162,10 @@ public interface IGnAreaQuerySV {
      * @author jiaxs
      * @ApiDocMethod
      * @ApiCode GN_0111
-     */
+     * @RestRelativeURL areaquery/getFilterAreaListByPage
+	 */
+	@POST
+	@Path("/getFilterAreaListByPage")
     PageInfo<GnAreaVo> getFilterAreaListByPage(GnAreaPageFilterCondition areaPage) throws BusinessException,SystemException;
     /**
      * 根据省份名称、级别查询数据
@@ -136,6 +175,9 @@ public interface IGnAreaQuerySV {
      * @throws SystemException
      * @author zhanglh
      * @ApiCode
-     */
+     * @RestRelativeURL areaquery/getAreaByName
+	 */
+	@POST
+	@Path("/getAreaByName")
     List<GnAreaVo> getAreaByName(GnAreaCondition condition) throws BusinessException,SystemException;
 }

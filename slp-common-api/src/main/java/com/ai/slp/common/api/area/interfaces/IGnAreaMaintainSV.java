@@ -2,6 +2,12 @@ package com.ai.slp.common.api.area.interfaces;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
 import com.ai.opt.base.exception.BusinessException;
 import com.ai.opt.base.exception.SystemException;
 import com.ai.slp.common.api.area.param.GnAreaCondition;
@@ -15,6 +21,9 @@ import com.ai.slp.common.api.area.param.GnAreaVo;
  * 
  * @author gucl
  */
+@Path("/areamaintain")
+@Consumes({ MediaType.APPLICATION_JSON })
+@Produces({ MediaType.APPLICATION_JSON, MediaType.TEXT_XML })
 public interface IGnAreaMaintainSV {
 
     /**
@@ -26,7 +35,10 @@ public interface IGnAreaMaintainSV {
      * @throws BusinessException,SystemException
      * @ApiDocMethod
      * @ApiCode GN_0120
-     */
+     * @RestRelativeURL areamaintain/addArea
+	 */
+	@POST
+	@Path("/addArea")
 	String addArea(GnAreaVo Area) throws BusinessException,SystemException;
 
     /**
@@ -37,7 +49,10 @@ public interface IGnAreaMaintainSV {
      * @throws BusinessException,SystemException
      * @ApiDocMethod
      * @ApiCode GN_0121
-     */
+     * @RestRelativeURL areamaintain/modifyArea
+	 */
+	@POST
+	@Path("/modifyArea")
     void modifyArea(GnAreaVo Area) throws BusinessException,SystemException;
 
     /**
@@ -49,7 +64,10 @@ public interface IGnAreaMaintainSV {
      * @throws BusinessException,SystemException
      * @ApiDocMethod
      * @ApiCode GN_0122
-     */
+     * @RestRelativeURL areamaintain/deleteArea
+	 */
+	@POST
+	@Path("/deleteArea")
     void deleteArea(GnAreaCondition gnAreaCondition) throws BusinessException,SystemException;
 
     /**
@@ -62,6 +80,9 @@ public interface IGnAreaMaintainSV {
      * @throws BusinessException,SystemException
      * @ApiDocMethod
      * @ApiCode GN_0123
-     */
+     * @RestRelativeURL areamaintain/deleteAreas
+	 */
+	@POST
+	@Path("/deleteAreas")
     void deleteAreas(List<GnAreaCondition> gnAreaCondition) throws BusinessException,SystemException;
 }
