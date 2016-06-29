@@ -89,7 +89,8 @@ public class CacheSVImpl implements ICacheSV {
             throw new BusinessException(ExceptCodeConstants.Special.PARAM_IS_NULL, "获取参数失败:参数编码不能为空");
         }
         if (StringUtil.isBlank(columnValue)) {
-            throw new BusinessException(ExceptCodeConstants.Special.PARAM_IS_NULL, "获取参数失败:参数取值不能为空");
+            //throw new BusinessException(ExceptCodeConstants.Special.PARAM_IS_NULL, "获取参数失败:参数取值不能为空");
+        	columnValue="";
         }
         
         SysParam sysParam=SysParamUtil.getSysParam(tenantId, typeCode, paramCode, columnValue);
