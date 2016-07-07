@@ -21,6 +21,6 @@ public class GnAreaCacheTread extends Thread{
             String key=area.getAreaCode().toUpperCase();
             cacheClient.hset(CacheNSMapper.CACHE_GN_AREA, key, JSON.toJSONString(area));
         } 
-        System.out.println("【"+Thread.currentThread().getName()+"】");
+        //System.out.println("【"+Thread.currentThread().getName()+"】");
     } 
 }
