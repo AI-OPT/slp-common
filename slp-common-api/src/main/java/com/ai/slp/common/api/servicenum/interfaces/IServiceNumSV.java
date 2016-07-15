@@ -38,7 +38,7 @@ public interface IServiceNumSV {
 	 * @return
 	 * @author gucl
 	 * @ApiDocMethod
-	 * @ApiCode 0502
+	 * @ApiCode GN_0502
 	 * @RestRelativeURL servicenum/getServiceNumByPhoneCond
 	 */
 	@POST
