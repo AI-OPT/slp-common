@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.ai.opt.sdk.cache.base.AbstractCache;
-import com.ai.slp.common.cache.GnSysParamCache;
+import com.ai.slp.common.cache.GnServiceNumCache;
 
 public final class CacheServiceStart {
 
@@ -24,14 +24,14 @@ public final class CacheServiceStart {
         Map<String, AbstractCache> caches = context
                 .getBeansOfType(AbstractCache.class);
         for (AbstractCache cache : caches.values()) {
-           //if(cache instanceof GnSysParamCache){
-               System.out.println("执行第一次");
+           if(cache instanceof GnServiceNumCache){
+               System.out.println("开始刷新缓存");
                try {
                    cache.write();
                } catch (Exception ex) {
                    LOG.error("缓存写入失败",ex);
                } 
-           //}
+           }
            
 
         }

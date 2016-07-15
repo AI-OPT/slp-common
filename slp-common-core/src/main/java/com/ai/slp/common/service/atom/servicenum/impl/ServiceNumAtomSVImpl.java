@@ -24,4 +24,18 @@ public class ServiceNumAtomSVImpl implements IServiceNumAtomSV {
 		return null;
 	}
 
+	@Override
+	public Integer getServiceNumCount() {
+		GnServiceNumCriteria sql = new GnServiceNumCriteria();
+        return MapperFactory.getGnServiceNumMapper().countByExample(sql);
+	}
+
+	@Override
+	public List<GnServiceNum> getServiceNumList(int pageNo, int pageSize) {
+		GnServiceNumCriteria sql = new GnServiceNumCriteria();
+        sql.setLimitStart((pageNo-1)*pageSize);
+        sql.setLimitEnd(pageSize);
+        return MapperFactory.getGnServiceNumMapper().selectByExample(sql);
+	}
+
 }

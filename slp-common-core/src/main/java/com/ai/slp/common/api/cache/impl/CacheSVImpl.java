@@ -11,11 +11,14 @@ import com.ai.opt.sdk.util.CollectionUtil;
 import com.ai.paas.ipaas.util.StringUtil;
 import com.ai.slp.common.api.cache.interfaces.ICacheSV;
 import com.ai.slp.common.api.cache.param.Area;
+import com.ai.slp.common.api.cache.param.PhoneCond;
 import com.ai.slp.common.api.cache.param.SysParam;
 import com.ai.slp.common.api.cache.param.SysParamMultiCond;
 import com.ai.slp.common.api.cache.param.SysParamSingleCond;
+import com.ai.slp.common.api.servicenum.param.ServiceNum;
 import com.ai.slp.common.constants.Constants;
 import com.ai.slp.common.util.AreaCacheUtil;
+import com.ai.slp.common.util.ServiceNumCacheUtil;
 import com.ai.slp.common.util.SysParamUtil;
 import com.alibaba.dubbo.config.annotation.Service;
 
@@ -99,6 +102,18 @@ public class CacheSVImpl implements ICacheSV {
         }
         
         return sysParam;
+	}
+
+	@Override
+	public ServiceNum getServiceNum(PhoneCond cond) throws BusinessException, SystemException {
+		if(cond!=null && !StringUtil.isBlank(cond.getPhone())){
+			ServiceNum serviceNum=ServiceNumCacheUtil.getServiceNum(cond.getPhone());
+			return serviceNum;
+		}
+		else{
+			return null;
+		}
+		
 	}
 
 

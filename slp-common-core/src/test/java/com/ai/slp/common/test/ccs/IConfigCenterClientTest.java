@@ -25,6 +25,7 @@ public class IConfigCenterClientTest {
         // 缓存空间
         String cachesnsConfig = "{\"com.ai.slp.common.cache.gnsysparam\":\"" + baasopwebRedisHost
                 + "\",\"com.ai.slp.common.cache.gnarea\":\"" + baasopwebRedisHost
+                + "\",\"com.ai.slp.common.cache.gnservicenum\":\"" + baasopwebRedisHost
                 + "\",\"com.ai.slp.common.cache.gnsubject\":\"" + baasopwebRedisHost
                 + "\",\"com.ai.slp.common.cache.gnsubjectfund\":\"" + baasopwebRedisHost
                 + "\",\"com.ai.slp.common.cache.gnsettlerule\":\"" + baasopwebRedisHost

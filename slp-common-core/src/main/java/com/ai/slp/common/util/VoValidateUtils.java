@@ -13,6 +13,7 @@ import com.ai.slp.common.api.area.param.GnAreaCondition;
 import com.ai.slp.common.api.area.param.GnAreaPageCondition;
 import com.ai.slp.common.api.area.param.GnAreaPageFilterCondition;
 import com.ai.slp.common.api.area.param.GnAreaVo;
+import com.ai.slp.common.api.servicenum.param.ServicePhoneCond;
 
 
 public final class VoValidateUtils {
@@ -196,6 +197,17 @@ public final class VoValidateUtils {
 			throw new BusinessException(ExceptCodeConstants.Special.PARAM_IS_NULL, "IP不能为空");
 		}
 		
+	}
+
+
+	public static void validateGetServiceNum(ServicePhoneCond cond) {
+		
+		if (null==cond) {
+			throw new BusinessException(ExceptCodeConstants.Special.PARAM_IS_NULL, "参数对象不能为空");
+		}
+		if (StringUtils.isEmpty(cond.getPhone())) {
+			throw new BusinessException(ExceptCodeConstants.Special.PARAM_IS_NULL, "手机号码不能为空");
+		}
 	}
 
 

@@ -11,9 +11,11 @@ import javax.ws.rs.core.MediaType;
 import com.ai.opt.base.exception.BusinessException;
 import com.ai.opt.base.exception.SystemException;
 import com.ai.slp.common.api.cache.param.Area;
+import com.ai.slp.common.api.cache.param.PhoneCond;
 import com.ai.slp.common.api.cache.param.SysParam;
 import com.ai.slp.common.api.cache.param.SysParamMultiCond;
 import com.ai.slp.common.api.cache.param.SysParamSingleCond;
+import com.ai.slp.common.api.servicenum.param.ServiceNum;
 
 /**
  * 公共中心缓存读取服务<br>
@@ -89,6 +91,21 @@ public interface ICacheSV {
 	@POST
 	@Path("/getArea")
     public Area getArea(String areaCode) throws BusinessException,SystemException;
+	
+	/**
+	 * 
+	 * @param serviceNumCode
+	 * @return
+	 * @throws BusinessException
+	 * @throws SystemException
+	 * @author gucl
+	 * @ApiDocMethod
+	 * @ApiCode GN_0207
+	 * @RestRelativeURL cacheservice/getServiceNum
+	 */
+	@POST
+	@Path("/getServiceNum")
+	public ServiceNum getServiceNum(PhoneCond serviceNumCode) throws BusinessException,SystemException;
     
 
 }
