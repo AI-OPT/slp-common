@@ -7,11 +7,13 @@ import org.springframework.stereotype.Component;
 import com.ai.opt.base.exception.BusinessException;
 import com.ai.opt.base.exception.SystemException;
 import com.ai.opt.sdk.constants.ExceptCodeConstants;
+import com.ai.opt.sdk.util.BeanUtils;
 import com.ai.opt.sdk.util.CollectionUtil;
 import com.ai.paas.ipaas.util.StringUtil;
 import com.ai.slp.common.api.cache.interfaces.ICacheSV;
 import com.ai.slp.common.api.cache.param.Area;
 import com.ai.slp.common.api.cache.param.PhoneCond;
+import com.ai.slp.common.api.cache.param.ServiceNumCache;
 import com.ai.slp.common.api.cache.param.SysParam;
 import com.ai.slp.common.api.cache.param.SysParamMultiCond;
 import com.ai.slp.common.api.cache.param.SysParamSingleCond;
@@ -105,10 +107,15 @@ public class CacheSVImpl implements ICacheSV {
 	}
 
 	@Override
-	public ServiceNum getServiceNum(PhoneCond cond) throws BusinessException, SystemException {
+	public ServiceNumCache getServiceNum(PhoneCond cond) throws BusinessException, SystemException {
 		if(cond!=null && !StringUtil.isBlank(cond.getPhone())){
 			ServiceNum serviceNum=ServiceNumCacheUtil.getServiceNum(cond.getPhone());
-			return serviceNum;
+			ServiceNumCache cache=null;
+			if(serviceNum!=null){
+				cache=new ServiceNumCache();
+				BeanUtils.copyProperties(cache, serviceNum);
+			}
+			return cache;
 		}
 		else{
 			return null;

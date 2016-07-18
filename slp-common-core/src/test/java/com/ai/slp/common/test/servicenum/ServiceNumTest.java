@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.ai.slp.common.api.cache.interfaces.ICacheSV;
 import com.ai.slp.common.api.cache.param.PhoneCond;
+import com.ai.slp.common.api.cache.param.ServiceNumCache;
 import com.ai.slp.common.api.servicenum.interfaces.IServiceNumSV;
 import com.ai.slp.common.api.servicenum.param.ServiceNum;
 import com.ai.slp.common.api.servicenum.param.ServicePhoneCond;
@@ -38,7 +39,7 @@ public class ServiceNumTest {
 		String phone="1300000";
 		PhoneCond cond=new PhoneCond();
 		cond.setPhone(phone);
-		ServiceNum result=cache.getServiceNum(cond);
+		ServiceNumCache result=cache.getServiceNum(cond);
 		System.out.println("result="+JSON.toJSONString(result));
 	}
 	@Test

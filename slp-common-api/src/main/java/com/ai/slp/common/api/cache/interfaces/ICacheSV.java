@@ -12,10 +12,10 @@ import com.ai.opt.base.exception.BusinessException;
 import com.ai.opt.base.exception.SystemException;
 import com.ai.slp.common.api.cache.param.Area;
 import com.ai.slp.common.api.cache.param.PhoneCond;
+import com.ai.slp.common.api.cache.param.ServiceNumCache;
 import com.ai.slp.common.api.cache.param.SysParam;
 import com.ai.slp.common.api.cache.param.SysParamMultiCond;
 import com.ai.slp.common.api.cache.param.SysParamSingleCond;
-import com.ai.slp.common.api.servicenum.param.ServiceNum;
 
 /**
  * 公共中心缓存读取服务<br>
@@ -105,7 +105,7 @@ public interface ICacheSV {
 	 */
 	@POST
 	@Path("/getServiceNum")
-	public ServiceNum getServiceNum(PhoneCond serviceNumCode) throws BusinessException,SystemException;
+	public ServiceNumCache getServiceNum(PhoneCond serviceNumCode) throws BusinessException,SystemException;
     
 
 }
