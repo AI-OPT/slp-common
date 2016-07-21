@@ -7,6 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.ai.slp.common.api.servicenum.param.ServiceNum;
+import com.ai.slp.common.api.servicenum.param.ServiceNumResponse;
 import com.ai.slp.common.api.servicenum.param.ServicePhoneCond;
 /**
  * 手机号码段服务
@@ -43,5 +44,5 @@ public interface IServiceNumSV {
 	 */
 	@POST
 	@Path("/getServiceNumByPhoneCond")
-	ServiceNum getServiceNumByPhoneCond(ServicePhoneCond cond);
+	ServiceNumResponse getServiceNumByPhoneCond(ServicePhoneCond cond);
 }

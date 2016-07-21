@@ -5,9 +5,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.ai.opt.base.vo.ResponseHeader;
+import com.ai.opt.sdk.constants.ExceptCodeConstants;
 import com.ai.opt.sdk.util.StringUtil;
 import com.ai.slp.common.api.servicenum.interfaces.IServiceNumSV;
 import com.ai.slp.common.api.servicenum.param.ServiceNum;
+import com.ai.slp.common.api.servicenum.param.ServiceNumResponse;
 import com.ai.slp.common.api.servicenum.param.ServicePhoneCond;
 import com.ai.slp.common.service.business.servicenum.IServiceNumBusiSV;
 import com.ai.slp.common.util.ServiceNumCacheUtil;
@@ -28,10 +31,15 @@ public class ServiceNumSVImpl implements IServiceNumSV {
 		return result;
 	}
 	@Override
-	public ServiceNum getServiceNumByPhoneCond(ServicePhoneCond cond) {
+	public ServiceNumResponse getServiceNumByPhoneCond(ServicePhoneCond cond) {
+		ServiceNumResponse result=new ServiceNumResponse();
+		ResponseHeader responseHeader = new ResponseHeader(true,
+                ExceptCodeConstants.Special.SUCCESS, "成功");
 		VoValidateUtils.validateGetServiceNum(cond);
 		String phone=cond.getPhone();
-		ServiceNum result = queryServiceNumByPhone(phone);
+		ServiceNum serviceNum = queryServiceNumByPhone(phone);
+		result.setServiceNum(serviceNum);
+		result.setResponseHeader(responseHeader);
 		return result;
 	}
 	private ServiceNum queryServiceNumByPhone(String phone) {

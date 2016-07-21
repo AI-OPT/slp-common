@@ -13,6 +13,7 @@ import com.ai.slp.common.api.cache.param.PhoneCond;
 import com.ai.slp.common.api.cache.param.ServiceNumCache;
 import com.ai.slp.common.api.servicenum.interfaces.IServiceNumSV;
 import com.ai.slp.common.api.servicenum.param.ServiceNum;
+import com.ai.slp.common.api.servicenum.param.ServiceNumResponse;
 import com.ai.slp.common.api.servicenum.param.ServicePhoneCond;
 import com.ai.slp.common.dao.mapper.bo.GnServiceNum;
 import com.ai.slp.common.service.atom.servicenum.IServiceNumAtomSV;
@@ -47,7 +48,7 @@ public class ServiceNumTest {
 		String phone="1300000";
 		ServicePhoneCond cond=new ServicePhoneCond();
 		cond.setPhone(phone);
-		ServiceNum result=sv.getServiceNumByPhoneCond(cond);
+		ServiceNumResponse result=sv.getServiceNumByPhoneCond(cond);
 		System.out.println("result="+JSON.toJSONString(result));
 	}
 	@Test
