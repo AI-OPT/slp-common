@@ -22,7 +22,7 @@ public interface IIndustrySV {
      * @throws BusinessException
      * @throws SystemException
      * @author zhanglh
-     * @ApiCode UAC_0012
+     * @ApiCode GN_0012
      * @RestRelativeURL industryservice/queryIndustryList
 	 */
 	@POST
@@ -34,7 +34,7 @@ public interface IIndustrySV {
      * @throws BusinessException
      * @throws SystemException
      * @author zhanglh
-     * @ApiCode UAC_0013
+     * @ApiCode GN_0013
      * @RestRelativeURL industryservice/queryByIndustryCode
 	 */
 	@POST

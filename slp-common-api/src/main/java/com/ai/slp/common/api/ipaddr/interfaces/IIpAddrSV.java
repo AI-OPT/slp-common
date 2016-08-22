@@ -6,6 +6,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.ai.opt.base.exception.BusinessException;
+import com.ai.opt.base.exception.SystemException;
 import com.ai.slp.common.api.ipaddr.param.IpAddr;
 /**
  * 依据IP地址查询归属地服务
@@ -29,5 +31,5 @@ public interface IIpAddrSV {
 	 */
 	@POST
 	@Path("/getIpAddrByIp")
-	IpAddr getIpAddrByIp(String ip);
+	IpAddr getIpAddrByIp(String ip)  throws BusinessException,SystemException;
 }

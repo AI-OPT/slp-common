@@ -93,7 +93,7 @@ public interface ICacheSV {
     public Area getArea(String areaCode) throws BusinessException,SystemException;
 	
 	/**
-	 * 
+	 * 获取手机号码归属地
 	 * @param serviceNumCode
 	 * @return
 	 * @throws BusinessException

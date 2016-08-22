@@ -6,6 +6,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.ai.opt.base.exception.BusinessException;
+import com.ai.opt.base.exception.SystemException;
 import com.ai.slp.common.api.servicenum.param.ServiceNum;
 import com.ai.slp.common.api.servicenum.param.ServiceNumResponse;
 import com.ai.slp.common.api.servicenum.param.ServicePhoneCond;
@@ -21,8 +23,9 @@ import com.ai.slp.common.api.servicenum.param.ServicePhoneCond;
 @Produces({ MediaType.APPLICATION_JSON, MediaType.TEXT_XML })
 public interface IServiceNumSV {
 	/**
-	 * 根据手机号码查询归属地和运营商
-	 * @param phone
+	 * 根据手机号码查询归属地和运营商.<br>
+	 * 查询时，phone为传入的手机号码.<br>
+	 * @param phone 手机号码
 	 * @return
 	 * @author gucl
 	 * @ApiDocMethod
@@ -31,7 +34,7 @@ public interface IServiceNumSV {
 	 */
 	@POST
 	@Path("/getServiceNumByPhone")
-	ServiceNum getServiceNumByPhone(String phone);
+	ServiceNum getServiceNumByPhone(String phone) throws BusinessException,SystemException;
 	
 	/**
 	 * 根据手机号码对象查询归属地和运营商
@@ -44,5 +47,5 @@ public interface IServiceNumSV {
 	 */
 	@POST
 	@Path("/getServiceNumByPhoneCond")
-	ServiceNumResponse getServiceNumByPhoneCond(ServicePhoneCond cond);
+	ServiceNumResponse getServiceNumByPhoneCond(ServicePhoneCond cond) throws BusinessException,SystemException;
 }
